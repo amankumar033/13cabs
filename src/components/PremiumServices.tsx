@@ -1,6 +1,6 @@
 'use client';
 
-import { TruckIcon, CalendarIcon, ClockIcon, CurrencyDollarIcon, GlobeAltIcon, HeartIcon, StarIcon, ShieldCheckIcon, CogIcon, UserIcon, MapPinIcon } from '@heroicons/react/24/outline';
+import { TruckIcon, CalendarIcon, ClockIcon, CurrencyDollarIcon, HeartIcon, StarIcon, ShieldCheckIcon, UserIcon, MapPinIcon } from '@heroicons/react/24/outline';
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -169,7 +169,7 @@ export default function PremiumServices({
     }
 
     // Fallback to icon component
-    const iconComponentMap: { [key: string]: React.ComponentType<any> } = {
+    const iconComponentMap: { [key: string]: React.ComponentType<{ className?: string }> } = {
       'heart': HeartIcon,
       'star': StarIcon,
       'shield': ShieldCheckIcon,
@@ -198,7 +198,7 @@ export default function PremiumServices({
       );
     }
     
-    const iconMap: { [key: string]: React.ComponentType<any> } = {
+    const iconMap: { [key: string]: React.ComponentType<{ className?: string }> } = {
       'heart': HeartIcon,
       'shield': ShieldCheckIcon,
       'clock': ClockIcon,

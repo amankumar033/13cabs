@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { CalendarIcon, ClockIcon, MapPinIcon, PhoneIcon, UserIcon, TruckIcon, CheckIcon, ArrowRightIcon, StarIcon, ShieldCheckIcon, CurrencyDollarIcon, GlobeAltIcon, HeartIcon, CogIcon } from '@heroicons/react/24/outline';
+import { CalendarIcon, ClockIcon, MapPinIcon, CheckIcon, ArrowRightIcon, StarIcon, ShieldCheckIcon, HeartIcon } from '@heroicons/react/24/outline';
 import WhyChooseUs from "@/components/WhyChooseUs";
 import PremiumServices from "@/components/PremiumServices";
 
@@ -262,7 +262,7 @@ export default function WheelchairCab() {
                   ))}
                 </div>
                 <p className="text-gray-200 italic mb-4 text-lg">
-                  "The drivers are always professional and the vehicles are perfectly accessible. Makes my daily commute so much easier."
+                  &quot;The drivers are always professional and the vehicles are perfectly accessible. Makes my daily commute so much easier.&quot;
                 </p>
                 <h4 className="text-white font-bold text-lg">Emma Johnson</h4>
                 <p className="text-gray-300 text-sm">Regular Commuter</p>
@@ -275,7 +275,7 @@ export default function WheelchairCab() {
                   ))}
                 </div>
                 <p className="text-gray-200 italic mb-4 text-lg">
-                  "Excellent service for medical appointments. The drivers are trained and very caring. Highly recommend!"
+                  &quot;Excellent service for medical appointments. The drivers are trained and very caring. Highly recommend!&quot;
                 </p>
                 <h4 className="text-white font-bold text-lg">Robert Chen</h4>
                 <p className="text-gray-300 text-sm">Medical Patient</p>
@@ -288,7 +288,7 @@ export default function WheelchairCab() {
                   ))}
                 </div>
                 <p className="text-gray-200 italic mb-4 text-lg">
-                  "Perfect for family outings. The accessible vehicles give us peace of mind and comfort."
+                  &quot;Perfect for family outings. The accessible vehicles give us peace of mind and comfort.&quot;
                 </p>
                 <h4 className="text-white font-bold text-lg">Maria Rodriguez</h4>
                 <p className="text-gray-300 text-sm">Family Member</p>

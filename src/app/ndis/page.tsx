@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarIcon, ClockIcon, MapPinIcon, PhoneIcon, UserIcon, TruckIcon, CheckIcon, ArrowRightIcon, StarIcon, ShieldCheckIcon, CurrencyDollarIcon, GlobeAltIcon, HeartIcon, CogIcon, AcademicCapIcon, ShoppingCartIcon, PaintBrushIcon, BuildingOfficeIcon } from '@heroicons/react/24/outline';
+import { ClockIcon, MapPinIcon, PhoneIcon, UserIcon, CheckIcon, ArrowRightIcon, StarIcon, ShieldCheckIcon, CurrencyDollarIcon, HeartIcon, AcademicCapIcon, PaintBrushIcon } from '@heroicons/react/24/outline';
 
 export default function NDISTransport() {
   return (
@@ -43,7 +43,7 @@ export default function NDISTransport() {
                   </Link>
                   
                   <a 
-                    href="https://wa.me/61415555576?text=Hi%2C%20I%27d%20like%20to%20book%20NDIS%20Transport%20services.%20Please%20let%20me%20know%20about%20availability%20and%20pricing."
+                    href="https://wa.me/61415555576?text=Hi%2C%20I&amp;#39;d%20like%20to%20book%20NDIS%20Transport%20services.%20Please%20let%20me%20know%20about%20availability%20and%20pricing."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group border-2 border-yellow-400 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-yellow-400 hover:text-black transition-all duration-300 backdrop-blur-sm bg-white/10 hover:bg-white/25 flex items-center justify-center space-x-2 sm:space-x-3"
@@ -83,7 +83,7 @@ export default function NDISTransport() {
                 <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">NDIS Transport</span>
               </h2>
               <p className="text-lg text-gray-200 max-w-2xl mx-auto">
-                We're committed to providing exceptional service that meets NDIS standards and exceeds participant expectations.
+                We&apos;re committed to providing exceptional service that meets NDIS standards and exceeds participant expectations.
               </p>
             </div>
             
@@ -314,7 +314,7 @@ export default function NDISTransport() {
                   ))}
                 </div>
                 <p className="text-gray-200 italic mb-4 text-lg">
-                  "The drivers are incredibly understanding and the service is perfectly aligned with my NDIS plan. Highly recommend!"
+                  &quot;The drivers are incredibly understanding and the service is perfectly aligned with my NDIS plan. Highly recommend!&quot;
                 </p>
                 <h4 className="text-white font-bold text-lg">Emma Johnson</h4>
                 <p className="text-gray-300 text-sm">NDIS Participant</p>
@@ -327,7 +327,7 @@ export default function NDISTransport() {
                   ))}
                 </div>
                 <p className="text-gray-200 italic mb-4 text-lg">
-                  "As a support coordinator, I trust MaxiWheelchair for all my clients' transportation needs. Reliable and professional."
+                  &quot;As a support coordinator, I trust MaxiWheelchair for all my clients&apos; transportation needs. Reliable and professional.&quot;
                 </p>
                 <h4 className="text-white font-bold text-lg">James Wilson</h4>
                 <p className="text-gray-300 text-sm">Support Coordinator</p>
@@ -340,7 +340,7 @@ export default function NDISTransport() {
                   ))}
                 </div>
                 <p className="text-gray-200 italic mb-4 text-lg">
-                  "The NDIS transport service has made such a difference for our family. The drivers are caring and professional."
+                  &quot;The NDIS transport service has made such a difference for our family. The drivers are caring and professional.&quot;
                 </p>
                 <h4 className="text-white font-bold text-lg">Lisa Chen</h4>
                 <p className="text-gray-300 text-sm">Family Member</p>
@@ -355,7 +355,7 @@ export default function NDISTransport() {
                 Ready to Get Started?
               </h2>
               <p className="text-lg text-gray-200 mb-8 max-w-2xl mx-auto">
-                Contact us today to discuss your NDIS transportation needs. We're here to help you maintain your independence and access the community.
+                Contact us today to discuss your NDIS transportation needs. We&apos;re here to help you maintain your independence and access the community.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/booking" className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-lg shadow-yellow-400/30 hover:shadow-yellow-400/50 transform hover:scale-105 flex items-center justify-center space-x-3">

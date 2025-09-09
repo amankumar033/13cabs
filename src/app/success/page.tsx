@@ -1,14 +1,25 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { CheckIcon, ArrowRightIcon, PhoneIcon } from '@heroicons/react/24/outline';
-import Link from "next/link";
+import { CheckIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 
-export default function Success() {
+function SuccessContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const [formData, setFormData] = useState<any>(null);
+  interface BookingFormData {
+    name?: string;
+    phone?: string;
+    serviceType?: string;
+    passengers?: string | number;
+    pickupLocation?: string;
+    destination?: string;
+    date?: string;
+    time?: string;
+    [key: string]: unknown;
+  }
+
+  const [formData, setFormData] = useState<BookingFormData | null>(null);
 
   useEffect(() => {
     // Get form data from URL parameters or localStorage
@@ -43,7 +54,7 @@ export default function Success() {
             
             {/* Confirmation Message */}
             <p className="text-gray-300 text-sm mb-4 max-w-2xl mx-auto">
-              Thank you for your booking request. We'll contact you shortly to confirm your ride details.
+              Thank you for your booking request. We&apos;ll contact you shortly to confirm your ride details.
             </p>
 
             {/* Booking Details (if available) */}
@@ -112,14 +123,14 @@ export default function Success() {
                     <span className="text-green-400 font-bold text-lg">1</span>
                   </div>
                   <h4 className="text-white font-semibold mb-2">Quick Review</h4>
-                  <p className="text-gray-300 text-sm">We'll review your booking within 15 minutes</p>
+                  <p className="text-gray-300 text-sm">We&apos;ll review your booking within 15 minutes</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-green-400 font-bold text-lg">2</span>
                   </div>
                   <h4 className="text-white font-semibold mb-2">Confirmation</h4>
-                  <p className="text-gray-300 text-sm">You'll receive a confirmation call or SMS</p>
+                  <p className="text-gray-300 text-sm">You&apos;ll receive a confirmation call or SMS</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -180,5 +191,13 @@ export default function Success() {
             </div>
           </div>
     </div>
+  );
+}
+
+export default function Success() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-white">Loading...</div>}>
+      <SuccessContent />
+    </Suspense>
   );
 }

@@ -179,7 +179,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             <div className="bg-gradient-to-br from-white/15 to-white/8 backdrop-blur-sm border border-white/25 rounded-2xl overflow-hidden hover:bg-white/25 transition-all duration-300">
            
-              <img src="/cab.png" alt="" className="w-full h-80"/>
+              <Image src="/cab.png" alt="" width={1600} height={800} className="w-full h-80 object-cover"/>
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-white mb-3">Maxi Cab Service</h3>
                 <p className="text-gray-300 mb-4 leading-relaxed">
@@ -200,7 +200,7 @@ export default function Home() {
             </div>
             
             <div className="bg-gradient-to-br from-white/15 to-white/8 backdrop-blur-sm border border-white/25 rounded-2xl overflow-hidden hover:bg-white/25 transition-all duration-300">
-              <img src="/wheelchair-cab.png" alt="" className="w-full h-80" />
+              <Image src="/wheelchair-cab.png" alt="" width={1600} height={800} className="w-full h-80 object-cover" />
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-white mb-3">Wheelchair Cab</h3>
                 <p className="text-gray-300 mb-4 leading-relaxed">

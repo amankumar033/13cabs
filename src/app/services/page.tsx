@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { PhoneIcon, UserIcon, CheckIcon, ArrowRightIcon, StarIcon, ShieldCheckIcon, ClockIcon, CurrencyDollarIcon, GlobeAltIcon, HeartIcon, CogIcon } from '@heroicons/react/24/outline';
+import { PhoneIcon, UserIcon, CheckIcon, ArrowRightIcon, StarIcon, ShieldCheckIcon, ClockIcon, HeartIcon } from '@heroicons/react/24/outline';
 import WhyChooseUs from "@/components/WhyChooseUs";
 import PremiumServices from "@/components/PremiumServices";
 import BookYourRideForm from "@/components/BookYourRideForm";

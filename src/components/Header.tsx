@@ -33,7 +33,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-4">
-            {navigationItems.map((item, index) => (
+            {navigationItems.map((item) => (
               <a 
                 key={item.page}
                 href={item.href} 

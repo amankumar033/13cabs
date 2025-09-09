@@ -1,87 +1,56 @@
-import Image from 'next/image';
-import { 
-  TruckIcon, 
-  MapPinIcon,
-  StarIcon,
-  HeartIcon,
-  ShieldCheckIcon,
-  ClockIcon,
-  CurrencyDollarIcon,
-  GlobeAltIcon,
-  CogIcon,
-  HomeIcon,
-  UserIcon,
-  PhoneIcon,
-  EnvelopeIcon
-} from '@heroicons/react/24/outline';
-import { companyConfig } from '@/config/company';
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { companyConfig } from "@/config/company";
+
+type LogoSize = "sm" | "md" | "lg";
 
 interface LogoProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
+  size?: LogoSize;
   showText?: boolean;
-  className?: string;
 }
 
-const iconMap = {
-  TruckIcon,
-  MapPinIcon,
-  StarIcon,
-  HeartIcon,
-  ShieldCheckIcon,
-  ClockIcon,
-  CurrencyDollarIcon,
-  GlobeAltIcon,
-  CogIcon,
-  HomeIcon,
-  UserIcon,
-  PhoneIcon,
-  EnvelopeIcon
+const sizeMap: Record<LogoSize, { width: number; height: number; text: string }> = {
+  sm: { width: 32, height: 32, text: "text-base" },
+  md: { width: 40, height: 40, text: "text-lg" },
+  lg: { width: 48, height: 48, text: "text-xl" },
 };
 
-const sizeClasses = {
-  sm: 'w-24 h-8',   // wider than tall for horizontal logos
-  md: 'w-32 h-10',
-  lg: 'w-40 h-14',
-  xl: 'w-48 h-16'
-};
+export default function Logo({ size = "md", showText = false }: LogoProps) {
+  const dims = sizeMap[size];
 
-const iconSizeClasses = {
-  sm: 'w-4 h-4',
-  md: 'w-5 h-5',
-  lg: 'w-6 h-6',
-  xl: 'w-8 h-8'
-};
-
-export default function Logo({ size = 'lg', showText = true, className = '' }: LogoProps) {
-  const { logo } = companyConfig;
-  
-  const IconComponent = iconMap[logo.icon as keyof typeof iconMap] || TruckIcon;
-  
   return (
-    <div className={`flex items-center space-x-2 ${className}`}>
-      <div className={`${sizeClasses[size]} flex items-center justify-center`}>
-        {logo.useIcon ? (
-          <IconComponent className={`${iconSizeClasses[size]} text-black`} />
-        ) : (
-          <Image
-            src={logo.image}
-            alt={logo.alt}
-            width={size === 'sm' ? 96 : size === 'md' ? 128 : size === 'lg' ? 160 : 192}
-            height={size === 'sm' ? 32 : size === 'md' ? 40 : size === 'lg' ? 56 : 64}
-            className="w-full h-full object-contain"
-          />
-        )}
-      </div>
-      {showText && (
-        <div>
-          <h1 className={`${size === 'sm' ? 'text-lg' : size === 'md' ? 'text-xl' : size === 'lg' ? 'text-xl' : 'text-2xl'} font-bold text-white`}>
-            {companyConfig.name}
-          </h1>
-          <p className={`${size === 'sm' ? 'text-xs' : 'text-xs'} text-gray-300 font-medium hidden sm:block`}>
-            {companyConfig.tagline}
-          </p>
+    <Link href="/" className="flex items-center space-x-3 focus:outline-none">
+      {companyConfig.logo.useIcon === false && companyConfig.logo.image ? (
+        <Image
+          src={companyConfig.logo.image}
+          alt={companyConfig.logo.alt}
+          width={dims.width}
+          height={dims.height}
+          className="rounded-md object-contain bg-transparent"
+          priority={size === "lg"}
+        />
+      ) : (
+        <div
+          className="flex items-center justify-center rounded-md bg-yellow-400 text-black"
+          style={{ width: dims.width, height: dims.height }}
+          aria-label={companyConfig.logo.alt}
+        >
+          {/* Fallback simple glyph */}
+          <span className="font-extrabold">M</span>
         </div>
       )}
-    </div>
+      {showText && (
+        <div className="leading-tight">
+          <div className={`font-extrabold tracking-tight text-white ${dims.text}`}>
+            {companyConfig.shortName}
+          </div>
+          <div className="text-[10px] uppercase tracking-wide text-yellow-400 font-semibold">
+            {companyConfig.tagline}
+          </div>
+        </div>
+      )}
+    </Link>
   );
 }

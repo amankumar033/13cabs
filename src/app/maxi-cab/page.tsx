@@ -3,9 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { CalendarIcon, ClockIcon, MapPinIcon, PhoneIcon, UserIcon, TruckIcon, CheckIcon, ArrowRightIcon, StarIcon, ShieldCheckIcon, ClockIcon as ClockIconSolid, CurrencyDollarIcon, GlobeAltIcon, HeartIcon, CogIcon } from '@heroicons/react/24/outline';
+import { CalendarIcon, ClockIcon, MapPinIcon, PhoneIcon, CheckIcon, ArrowRightIcon, StarIcon, ShieldCheckIcon, CurrencyDollarIcon, GlobeAltIcon, HeartIcon } from '@heroicons/react/24/outline';
 import WhyChooseUs from "@/components/WhyChooseUs";
-import PremiumServices from "@/components/PremiumServices";
 
 export default function MaxiCab() {
   const router = useRouter();
@@ -413,7 +412,7 @@ export default function MaxiCab() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                 {/* Standard Maxi Cab */}
                 <div className="bg-gradient-to-br from-white/15 to-white/8 backdrop-blur-sm border border-white/25 rounded-2xl overflow-hidden hover:bg-white/25 transition-all duration-300">
-                 <img src="/standard-maxi-cab.png" alt="Standard maxi cab" className="h-75 w-full"/>
+                 <Image src="/standard-maxi-cab.png" alt="Standard maxi cab" width={1200} height={600} className="h-75 w-full object-cover"/>
                   <div className="p-6">
                     <h3 className="text-2xl font-bold text-white mb-3">Standard Maxi Cab</h3>
                     <p className="text-gray-300 mb-4 leading-relaxed">
@@ -438,7 +437,7 @@ export default function MaxiCab() {
                 
                 {/* Large Maxi Cab */}
                 <div className="bg-gradient-to-br from-white/15 to-white/8 backdrop-blur-sm border border-white/25 rounded-2xl overflow-hidden hover:bg-white/25 transition-all duration-300">
-                <img src="/large-maxi-cab.png" alt="Large maxi cab" className="h-75 w-full"/>
+                <Image src="/large-maxi-cab.png" alt="Large maxi cab" width={1200} height={600} className="h-75 w-full object-cover"/>
                   <div className="p-6">
                     <h3 className="text-2xl font-bold text-white mb-3">Large Maxi Cab</h3>
                     <p className="text-gray-300 mb-4 leading-relaxed">
@@ -463,7 +462,7 @@ export default function MaxiCab() {
                 
                 {/* Premium Maxi Cab */}
                 <div className="bg-gradient-to-br from-white/15 to-white/8 backdrop-blur-sm border border-white/25 rounded-2xl overflow-hidden hover:bg-white/25 transition-all duration-300">
-                <img src="/premium-maxi-cab.png" alt="Premium maxi cab" className="h-75 w-full"/>
+                <Image src="/premium-maxi-cab.png" alt="Premium maxi cab" width={1200} height={600} className="h-75 w-full object-cover"/>
                   <div className="p-6">
                     <h3 className="text-2xl font-bold text-white mb-3">Premium Maxi Cab</h3>
                     <p className="text-gray-300 mb-4 leading-relaxed">
@@ -508,7 +507,7 @@ export default function MaxiCab() {
                   ))}
                 </div>
                 <p className="text-gray-200 italic mb-4 text-lg">
-                  "Perfect for our team events. The drivers are always professional and the vehicles are spotless."
+                  &quot;Perfect for our team events. The drivers are always professional and the vehicles are spotless.&quot;
                 </p>
                 <h4 className="text-white font-bold text-lg">David Wilson</h4>
                 <p className="text-gray-300 text-sm">Corporate Client</p>
@@ -521,7 +520,7 @@ export default function MaxiCab() {
                   ))}
                 </div>
                 <p className="text-gray-200 italic mb-4 text-lg">
-                  "Great for family trips to the airport. Plenty of space for luggage and very comfortable ride."
+                  &quot;Great for family trips to the airport. Plenty of space for luggage and very comfortable ride.&quot;
                 </p>
                 <h4 className="text-white font-bold text-lg">Sarah Thompson</h4>
                 <p className="text-gray-300 text-sm">Family Traveler</p>
@@ -534,7 +533,7 @@ export default function MaxiCab() {
                   ))}
                 </div>
                 <p className="text-gray-200 italic mb-4 text-lg">
-                  "Reliable service for all our corporate events. Highly recommend for group transportation."
+                  &quot;Reliable service for all our corporate events. Highly recommend for group transportation.&quot;
                 </p>
                 <h4 className="text-white font-bold text-lg">Michael Rodriguez</h4>
                 <p className="text-gray-300 text-sm">Event Organizer</p>

@@ -4,7 +4,7 @@ interface WhyChooseUsProps {
   title?: string;
   subtitle?: string;
   features?: Array<{
-    icon: React.ComponentType<any>;
+    icon: React.ComponentType<{ className?: string }>;
     title: string;
     description: string;
   }>;

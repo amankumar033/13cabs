@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarIcon, ClockIcon, MapPinIcon, PhoneIcon, UserIcon, TruckIcon, CheckIcon, ArrowRightIcon, StarIcon, ShieldCheckIcon, CurrencyDollarIcon, GlobeAltIcon, HeartIcon, CogIcon, EnvelopeIcon, ChatBubbleLeftRightIcon, QuestionMarkCircleIcon } from '@heroicons/react/24/outline';
+import { ClockIcon, MapPinIcon, PhoneIcon, UserIcon, CheckIcon, ArrowRightIcon, EnvelopeIcon, ChatBubbleLeftRightIcon } from '@heroicons/react/24/outline';
 import CustomDropdown from "@/components/CustomDropdown";
 
 export default function Contact() {
@@ -36,7 +36,7 @@ export default function Contact() {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8">
                 <a 
-                  href="https://wa.me/61415555576?text=Hi%2C%20I%27d%20like%20to%20book%20a%20ride%20with%20Maxi%20Cab.%20Please%20let%20me%20know%20about%20availability%20and%20pricing."
+                  href="https://wa.me/61415555576?text=Hi%2C%20I&amp;#39;d%20like%20to%20book%20a%20ride%20with%20Maxi%20Cab.%20Please%20let%20me%20know%20about%20availability%20and%20pricing."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-lg shadow-yellow-400/30 hover:shadow-yellow-400/50 transform hover:scale-105 flex items-center justify-center space-x-2 sm:space-x-3 border border-yellow-300/30"
@@ -148,7 +148,7 @@ export default function Contact() {
                 <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">Message</span>
               </h2>
               <p className="text-lg text-gray-200 max-w-2xl mx-auto">
-                Have a question or need a quote? Fill out the form below and we'll get back to you within 24 hours.
+                Have a question or need a quote? Fill out the form below and we&apos;ll get back to you within 24 hours.
               </p>
             </div>
             
@@ -164,7 +164,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white">Contact Form</h3>
-                      <p className="text-gray-300 text-sm font-medium">We'll respond within 24 hours</p>
+                      <p className="text-gray-300 text-sm font-medium">We&apos;ll respond within 24 hours</p>
                     </div>
                   </div>
 
@@ -354,7 +354,7 @@ export default function Contact() {
                 <div className="bg-gradient-to-br from-white/15 to-white/8 backdrop-blur-sm border border-white/25 rounded-2xl p-6">
                   <h3 className="text-lg font-bold text-white mb-3">Can I track my ride in real-time?</h3>
                   <p className="text-gray-300 text-sm leading-relaxed">
-                    Yes, we provide real-time GPS tracking for all bookings. You'll receive updates via SMS or phone call about your driver's location and estimated arrival time.
+                    Yes, we provide real-time GPS tracking for all bookings. You&apos;ll receive updates via SMS or phone call about your driver&apos;s location and estimated arrival time.
                   </p>
                 </div>
               </div>
@@ -419,7 +419,7 @@ export default function Contact() {
                 Ready to Book Your Ride?
               </h2>
               <p className="text-lg text-gray-200 mb-8 max-w-2xl mx-auto">
-                Don't wait! Contact us now for reliable, professional transportation services in Melbourne.
+                Don&apos;t wait! Contact us now for reliable, professional transportation services in Melbourne.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                 <Link href="/booking" className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-lg shadow-yellow-400/30 hover:shadow-yellow-400/50 transform hover:scale-105 flex items-center justify-center space-x-2 sm:space-x-3">

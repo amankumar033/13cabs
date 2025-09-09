@@ -1,4 +1,5 @@
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
 import { companyConfig } from '@/config/company';
 import Logo from './Logo';
 
@@ -21,22 +22,22 @@ export default function Footer() {
             <div className="space-y-3">
               <h4 className="text-base font-bold text-white">Quick Links</h4>
               <ul className="space-y-1 text-sm">
-                <li><a href="/" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Home</a></li>
-                <li><a href="/services" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Services</a></li>
-                <li><a href="/maxi-cab" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Maxi Cab</a></li>
-                <li><a href="/contact" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Contact</a></li>
-                <li><a href="/ndis" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">NDIS</a></li>
+                <li><Link href="/" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Home</Link></li>
+                <li><Link href="/services" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Services</Link></li>
+                <li><Link href="/maxi-cab" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Maxi Cab</Link></li>
+                <li><Link href="/contact" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Contact</Link></li>
+                <li><Link href="/ndis" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">NDIS</Link></li>
               </ul>
             </div>
             
             <div className="space-y-3">
               <h4 className="text-base font-bold text-white">Our Services</h4>
               <ul className="space-y-1 text-sm">
-                <li><a href="/maxi-cab" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Maxi Cab Service</a></li>
-                <li><a href="/wheelchair-cab" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Wheelchair Cab</a></li>
-                <li><a href="/ndis" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">NDIS Transport</a></li>
-                <li><a href="/airport-transfer" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Airport Transfers</a></li>
-                <li><a href="/medical-transport" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Medical Transport</a></li>
+                <li><Link href="/maxi-cab" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Maxi Cab Service</Link></li>
+                <li><Link href="/wheelchair-cab" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Wheelchair Cab</Link></li>
+                <li><Link href="/ndis" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">NDIS Transport</Link></li>
+                <li><Link href="/airport-transfer" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Airport Transfers</Link></li>
+                <li><Link href="/medical-transport" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Medical Transport</Link></li>
               </ul>
             </div>
           </div>
@@ -73,22 +74,22 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="text-lg font-bold text-white border-b border-yellow-400/30 pb-2">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="/" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Home</a></li>
-              <li><a href="/services" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Services</a></li>
-              <li><a href="/maxi-cab" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Maxi Cab</a></li>
-              <li><a href="/contact" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Contact</a></li>
-              <li><a href="/ndis" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">NDIS</a></li>
+              <li><Link href="/" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Home</Link></li>
+              <li><Link href="/services" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Services</Link></li>
+              <li><Link href="/maxi-cab" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Maxi Cab</Link></li>
+              <li><Link href="/contact" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Contact</Link></li>
+              <li><Link href="/ndis" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">NDIS</Link></li>
             </ul>
           </div>
           
           <div className="space-y-4">
             <h4 className="text-lg font-bold text-white border-b border-yellow-400/30 pb-2">Our Services</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="/maxi-cab" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Maxi Cab Service</a></li>
-              <li><a href="/wheelchair-cab" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Wheelchair Cab</a></li>
-              <li><a href="/ndis" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">NDIS Transport</a></li>
-              <li><a href="/airport-transfer" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Airport Transfers</a></li>
-              <li><a href="/medical-transport" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Medical Transport</a></li>
+              <li><Link href="/maxi-cab" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Maxi Cab Service</Link></li>
+              <li><Link href="/wheelchair-cab" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Wheelchair Cab</Link></li>
+              <li><Link href="/ndis" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">NDIS Transport</Link></li>
+              <li><Link href="/airport-transfer" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Airport Transfers</Link></li>
+              <li><Link href="/medical-transport" className="text-gray-200 hover:text-yellow-400 transition-colors duration-300 hover:translate-x-1 inline-block font-medium">Medical Transport</Link></li>
             </ul>
           </div>
           
