@@ -9,3 +9,4 @@ export default function FloatingActionButtonWrapper() {
   return <FloatingActionButton isVisible={!isMobileMenuOpen} />;
 }
 
+

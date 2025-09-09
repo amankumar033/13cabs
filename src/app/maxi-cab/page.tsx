@@ -412,7 +412,9 @@ export default function MaxiCab() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                 {/* Standard Maxi Cab */}
                 <div className="bg-gradient-to-br from-white/15 to-white/8 backdrop-blur-sm border border-white/25 rounded-2xl overflow-hidden hover:bg-white/25 transition-all duration-300">
-                 <Image src="/standard-maxi-cab.png" alt="Standard maxi cab" width={1200} height={600} className="h-75 w-full object-cover"/>
+                 <div className="relative h-48 sm:h-56 lg:h-64 w-full">
+                   <Image src="/new-standard.png" alt="Standard maxi cab" fill className="object-cover object-center"/>
+                 </div>
                   <div className="p-6">
                     <h3 className="text-2xl font-bold text-white mb-3">Standard Maxi Cab</h3>
                     <p className="text-gray-300 mb-4 leading-relaxed">
@@ -437,7 +439,9 @@ export default function MaxiCab() {
                 
                 {/* Large Maxi Cab */}
                 <div className="bg-gradient-to-br from-white/15 to-white/8 backdrop-blur-sm border border-white/25 rounded-2xl overflow-hidden hover:bg-white/25 transition-all duration-300">
-                <Image src="/large-maxi-cab.png" alt="Large maxi cab" width={1200} height={600} className="h-75 w-full object-cover"/>
+                <div className="relative h-48 sm:h-56 lg:h-64 w-full">
+                  <Image src="/large-cab.png" alt="Large maxi cab" fill className="object-cover object-center"/>
+                </div>
                   <div className="p-6">
                     <h3 className="text-2xl font-bold text-white mb-3">Large Maxi Cab</h3>
                     <p className="text-gray-300 mb-4 leading-relaxed">
@@ -462,7 +466,9 @@ export default function MaxiCab() {
                 
                 {/* Premium Maxi Cab */}
                 <div className="bg-gradient-to-br from-white/15 to-white/8 backdrop-blur-sm border border-white/25 rounded-2xl overflow-hidden hover:bg-white/25 transition-all duration-300">
-                <Image src="/premium-maxi-cab.png" alt="Premium maxi cab" width={1200} height={600} className="h-75 w-full object-cover"/>
+                <div className="relative h-48 sm:h-56 lg:h-64 w-full">
+                  <Image src="/premium-maxi-cab.png" alt="Premium maxi cab" fill className="object-cover object-center"/>
+                </div>
                   <div className="p-6">
                     <h3 className="text-2xl font-bold text-white mb-3">Premium Maxi Cab</h3>
                     <p className="text-gray-300 mb-4 leading-relaxed">

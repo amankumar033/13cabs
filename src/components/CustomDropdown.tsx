@@ -65,6 +65,12 @@ export default function CustomDropdown({
     setSearchTerm("");
   };
 
+  const handleClear = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    onChange?.("");
+    setSearchTerm("");
+  };
+
   const selectedOption = options.find(option => option.value === value);
 
   return (
@@ -79,11 +85,25 @@ export default function CustomDropdown({
           <span className={selectedOption ? 'text-white' : 'text-gray-300'}>
             {selectedOption ? selectedOption.label : placeholder}
           </span>
-          <ChevronDownIcon 
-            className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
-              isOpen ? 'rotate-180' : ''
-            }`} 
-          />
+          <div className="flex items-center space-x-1">
+            {selectedOption && (
+              <button
+                type="button"
+                onClick={handleClear}
+                className="text-gray-400 hover:text-white transition-colors duration-200 p-1"
+                title="Clear selection"
+              >
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            )}
+            <ChevronDownIcon 
+              className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
+                isOpen ? 'rotate-180' : ''
+              }`} 
+            />
+          </div>
         </div>
       </div>
 
@@ -101,6 +121,14 @@ export default function CustomDropdown({
             />
           </div>
           <div className="max-h-48 overflow-y-auto">
+            {selectedOption && (
+              <div
+                className="px-3 py-2 text-sm cursor-pointer transition-colors duration-200 hover:bg-red-400/20 text-red-300 hover:text-red-200 border-b border-white/10"
+                onClick={() => handleClear({} as React.MouseEvent)}
+              >
+                Clear selection
+              </div>
+            )}
             {filteredOptions.length > 0 ? (
               filteredOptions.map((option) => (
                 <div
@@ -124,4 +152,5 @@ export default function CustomDropdown({
     </div>
   );
 }
+
 

@@ -61,53 +61,60 @@ function SuccessContent() {
             {formData && (
               <div className="bg-gradient-to-br from-blue-600/20 to-blue-700/20 border border-blue-500/30 rounded-2xl p-3 mb-4">
                 <h3 className="text-blue-400 font-bold text-base mb-2">Booking Details</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-left">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-center md:text-left">
                   {formData.name && (
-                    <div>
+                    <div className="col-span-2 md:col-span-1">
                       <span className="text-gray-400 text-sm">Name:</span>
                       <p className="text-white font-medium">{formData.name}</p>
                     </div>
                   )}
-                  {formData.phone && (
-                    <div>
-                      <span className="text-gray-400 text-sm">Phone:</span>
-                      <p className="text-white font-medium">{formData.phone}</p>
-                    </div>
-                  )}
+                  
                   {formData.serviceType && (
                     <div>
                       <span className="text-gray-400 text-sm">Service:</span>
                       <p className="text-white font-medium">{formData.serviceType}</p>
                     </div>
                   )}
-                  {formData.passengers && (
+                  
+                  {formData.phone && (
                     <div>
-                      <span className="text-gray-400 text-sm">Passengers:</span>
-                      <p className="text-white font-medium">{formData.passengers}</p>
+                      <span className="text-gray-400 text-sm">Phone:</span>
+                      <p className="text-white font-medium">{formData.phone}</p>
                     </div>
                   )}
-                  {formData.pickupLocation && (
-                    <div>
-                      <span className="text-gray-400 text-sm">Pickup:</span>
-                      <p className="text-white font-medium">{formData.pickupLocation}</p>
-                    </div>
-                  )}
-                  {formData.destination && (
-                    <div>
-                      <span className="text-gray-400 text-sm">Destination:</span>
-                      <p className="text-white font-medium">{formData.destination}</p>
-                    </div>
-                  )}
+                  
                   {formData.date && (
                     <div>
                       <span className="text-gray-400 text-sm">Date:</span>
                       <p className="text-white font-medium">{formData.date}</p>
                     </div>
                   )}
+                  
                   {formData.time && (
                     <div>
                       <span className="text-gray-400 text-sm">Time:</span>
                       <p className="text-white font-medium">{formData.time}</p>
+                    </div>
+                  )}
+                  
+                  {formData.passengers && (
+                    <div>
+                      <span className="text-gray-400 text-sm">Passengers:</span>
+                      <p className="text-white font-medium">{formData.passengers}</p>
+                    </div>
+                  )}
+                  
+                  {formData.pickupLocation && (
+                    <div>
+                      <span className="text-gray-400 text-sm">Pickup:</span>
+                      <p className="text-white font-medium">{formData.pickupLocation}</p>
+                    </div>
+                  )}
+                  
+                  {formData.destination && (
+                    <div>
+                      <span className="text-gray-400 text-sm">Destination:</span>
+                      <p className="text-white font-medium">{formData.destination}</p>
                     </div>
                   )}
                 </div>

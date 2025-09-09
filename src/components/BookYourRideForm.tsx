@@ -6,6 +6,7 @@ import { UserIcon, PhoneIcon, MapPinIcon, ArrowRightIcon } from '@heroicons/reac
 import CustomDropdown from "@/components/CustomDropdown";
 import CustomDatePicker from "@/components/CustomDatePicker";
 import CustomTimePicker from "@/components/CustomTimePicker";
+import toast from "react-hot-toast";
 
 interface BookYourRideFormProps {
   title?: string;
@@ -46,7 +47,17 @@ export default function BookYourRideForm({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Basic validation
+    if (!formData.name || !formData.phone || !formData.serviceType || !formData.pickupLocation || !formData.destination) {
+      toast.error('Please fill in all required fields');
+      return;
+    }
+    
     console.log('Form submitted:', formData);
+    
+    // Show success toast
+    toast.success('Booking submitted successfully! We will contact you soon.');
     
     // Redirect to success page with form data
     const encodedData = encodeURIComponent(JSON.stringify(formData));
