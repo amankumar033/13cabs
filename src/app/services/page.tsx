@@ -142,9 +142,9 @@ export default function Services() {
                     Professional drivers
                   </li>
                 </ul>
-                <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-xl font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300">
+                <Link href="/booking" className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-xl font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 inline-block">
                   Learn More
-                </button>
+                </Link>
               </div>
               
               <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-white/15 to-white/8 backdrop-blur-sm border border-white/25 hover:bg-white/25 transition-all duration-300 group">
@@ -175,9 +175,9 @@ export default function Services() {
                     Event transportation
                   </li>
                 </ul>
-                <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-xl font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300">
+                <Link href="/maxi-cab" className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-xl font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 inline-block">
                   Learn More
-                </button>
+                </Link>
               </div>
               
               <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-white/15 to-white/8 backdrop-blur-sm border border-white/25 hover:bg-white/25 transition-all duration-300 group">
@@ -202,9 +202,9 @@ export default function Services() {
                     Trained drivers
                   </li>
                 </ul>
-                <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-xl font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300">
+                <Link href="/wheelchair-cab" className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-xl font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 inline-block">
                   Learn More
-                </button>
+                </Link>
               </div>
             </div>
           </div>

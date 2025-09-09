@@ -413,7 +413,7 @@ export default function MaxiCab() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                 {/* Standard Maxi Cab */}
                 <div className="bg-gradient-to-br from-white/15 to-white/8 backdrop-blur-sm border border-white/25 rounded-2xl overflow-hidden hover:bg-white/25 transition-all duration-300">
-                 <img src="standard-car.png" alt="" className="h-75 w-full"/>
+                 <img src="/standard-maxi-cab.png" alt="Standard maxi cab" className="h-75 w-full"/>
                   <div className="p-6">
                     <h3 className="text-2xl font-bold text-white mb-3">Standard Maxi Cab</h3>
                     <p className="text-gray-300 mb-4 leading-relaxed">
@@ -438,7 +438,7 @@ export default function MaxiCab() {
                 
                 {/* Large Maxi Cab */}
                 <div className="bg-gradient-to-br from-white/15 to-white/8 backdrop-blur-sm border border-white/25 rounded-2xl overflow-hidden hover:bg-white/25 transition-all duration-300">
-                <img src="large-car.png" alt="" className="h-75 w-full"/>
+                <img src="/large-maxi-cab.png" alt="Large maxi cab" className="h-75 w-full"/>
                   <div className="p-6">
                     <h3 className="text-2xl font-bold text-white mb-3">Large Maxi Cab</h3>
                     <p className="text-gray-300 mb-4 leading-relaxed">
@@ -463,7 +463,7 @@ export default function MaxiCab() {
                 
                 {/* Premium Maxi Cab */}
                 <div className="bg-gradient-to-br from-white/15 to-white/8 backdrop-blur-sm border border-white/25 rounded-2xl overflow-hidden hover:bg-white/25 transition-all duration-300">
-                <img src="premium-car.png" alt="" className="h-75 w-full"/>
+                <img src="/premium-maxi-cab.png" alt="Premium maxi cab" className="h-75 w-full"/>
                   <div className="p-6">
                     <h3 className="text-2xl font-bold text-white mb-3">Premium Maxi Cab</h3>
                     <p className="text-gray-300 mb-4 leading-relaxed">

@@ -39,10 +39,10 @@ const iconMap = {
 };
 
 const sizeClasses = {
-  sm: 'w-8 h-8',
-  md: 'w-10 h-10',
-  lg: 'w-12 h-12',
-  xl: 'w-16 h-16'
+  sm: 'w-24 h-8',   // wider than tall for horizontal logos
+  md: 'w-32 h-10',
+  lg: 'w-40 h-14',
+  xl: 'w-48 h-16'
 };
 
 const iconSizeClasses = {
@@ -58,16 +58,16 @@ export default function Logo({ size = 'lg', showText = true, className = '' }: L
   const IconComponent = iconMap[logo.icon as keyof typeof iconMap] || TruckIcon;
   
   return (
-    <div className={`flex items-center space-x-3 ${className}`}>
-      <div className={`${sizeClasses[size]} bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center shadow-lg shadow-yellow-400/30 border border-yellow-300/30`}>
+    <div className={`flex items-center space-x-2 ${className}`}>
+      <div className={`${sizeClasses[size]} flex items-center justify-center`}>
         {logo.useIcon ? (
           <IconComponent className={`${iconSizeClasses[size]} text-black`} />
         ) : (
           <Image
             src={logo.image}
             alt={logo.alt}
-            width={size === 'sm' ? 32 : size === 'md' ? 40 : size === 'lg' ? 48 : 64}
-            height={size === 'sm' ? 32 : size === 'md' ? 40 : size === 'lg' ? 48 : 64}
+            width={size === 'sm' ? 96 : size === 'md' ? 128 : size === 'lg' ? 160 : 192}
+            height={size === 'sm' ? 32 : size === 'md' ? 40 : size === 'lg' ? 56 : 64}
             className="w-full h-full object-contain"
           />
         )}
@@ -77,7 +77,7 @@ export default function Logo({ size = 'lg', showText = true, className = '' }: L
           <h1 className={`${size === 'sm' ? 'text-lg' : size === 'md' ? 'text-xl' : size === 'lg' ? 'text-xl' : 'text-2xl'} font-bold text-white`}>
             {companyConfig.name}
           </h1>
-          <p className={`${size === 'sm' ? 'text-xs' : 'text-xs'} text-gray-300 font-medium`}>
+          <p className={`${size === 'sm' ? 'text-xs' : 'text-xs'} text-gray-300 font-medium hidden sm:block`}>
             {companyConfig.tagline}
           </p>
         </div>

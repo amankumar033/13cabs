@@ -26,13 +26,13 @@ export default function Header() {
 
   return (
     <header className="relative z-50 bg-black border-b border-white/40 sticky top-0">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-4 lg:px-6">
+        <div className="flex items-center justify-between h-20 lg:h-16">
           {/* Logo */}
           <Logo size="lg" showText={true} />
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6">
+          <nav className="hidden lg:flex items-center space-x-4">
             {navigationItems.map((item, index) => (
               <a 
                 key={item.page}

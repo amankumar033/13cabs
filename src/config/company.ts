@@ -8,8 +8,8 @@ export const companyConfig = {
   // Logo Configuration
   logo: {
     icon: "TruckIcon", // Available icons: TruckIcon, MapPinIcon, StarIcon, HeartIcon, ShieldCheckIcon, ClockIcon, CurrencyDollarIcon, GlobeAltIcon, CogIcon, HomeIcon, UserIcon, PhoneIcon, EnvelopeIcon
-    image: "/logo.png", // Path to logo image (if using image instead of icon)
-    useIcon: true, // Set to false if you want to use an image instead of icon
+    image:"/maxi-logo-removebg-preview.png",
+    useIcon: false, // Set to false if you want to use an image instead of icon
     alt: "Maxi Cab Melbourne Logo"
   },
   
