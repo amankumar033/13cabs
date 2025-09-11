@@ -12,7 +12,7 @@ export default function Contact() {
         <div className="relative">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/car-bg.png"
+              src="/new-standard.png"
               alt="Contact us background"
               fill
               className="object-cover"
