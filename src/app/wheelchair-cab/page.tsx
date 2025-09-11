@@ -25,7 +25,7 @@ export default function WheelchairCab() {
               src="/wheelchair-cab.png"
               alt="Wheelchair accessible Cab van background"
               fill
-              className="object-cover"
+              className="object-cover sm:object-cover object-contain"
               priority
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/60"></div>
@@ -89,7 +89,7 @@ export default function WheelchairCab() {
                     alt="Wheelchair accessible Cab van"
                     width={600}
                     height={400}
-                    className="w-full h-auto object-cover"
+                    className="w-full h-auto object-cover sm:object-cover object-contain"
                   />
                 </div>
               </div>

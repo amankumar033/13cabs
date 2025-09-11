@@ -34,9 +34,10 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-4">
             {navigationItems.map((item) => (
-              <a 
+              <Link 
                 key={item.page}
-                href={item.href} 
+                href={item.href}
+                prefetch
                 className={`transition-colors duration-300 font-medium ${
                   isActivePage(item.page) 
                     ? 'text-yellow-400 font-semibold border-b-2 border-yellow-400 pb-1' 
@@ -44,7 +45,7 @@ export default function Header() {
                 }`}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -70,19 +71,19 @@ export default function Header() {
       </div>
 
       {/* Mobile Navigation Panel */}
-      <div className={`lg:hidden fixed inset-0 z-[9999] transition-all duration-20000 ease-in-out ${
+      <div className={`lg:hidden fixed inset-0 z-[9999] transition-all duration-300 ease-in-out ${
         isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
       }`}>
         {/* Backdrop */}
         <div 
-          className={`absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-6000 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
+          className={`absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
             isMobileMenuOpen ? 'opacity-100' : 'opacity-0'
           }`}
           onClick={closeMobileMenu}
         />
         
         {/* Side Panel */}
-        <div className={`absolute left-0 top-0 h-full w-80 max-w-[85vw] bg-black border-r border-white/20 transform transition-all duration-6000 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
+        <div className={`absolute left-0 top-0 h-full w-80 max-w-[85vw] bg-black border-r border-white/20 transform transition-all duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
           isMobileMenuOpen ? 'translate-x-0' : '-translate-x-96'
         }`}>
           {/* Panel Header */}
@@ -110,8 +111,9 @@ export default function Header() {
             <ul className="space-y-1">
               {navigationItems.map((item, index) => (
                 <li key={item.page}>
-                  <a
+                  <Link
                     href={item.href}
+                    prefetch
                     onClick={closeMobileMenu}
                     className={`block px-4 py-3 rounded-lg transition-all duration-300 font-medium ${
                       isActivePage(item.page)
@@ -120,7 +122,7 @@ export default function Header() {
                     }`}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                   {index < navigationItems.length - 1 && (
                     <div className="h-px bg-white/10 mx-4 my-2" />
                   )}

@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingActionButtonWrapper from "@/components/FloatingActionButtonWrapper";
+import RouteProgress from "@/components/RouteProgress";
 import { MobileMenuProvider } from "@/contexts/MobileMenuContext";
 import { companyConfig } from "@/config/company";
 import { Toaster } from "react-hot-toast";
@@ -14,6 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://maxicab24.com'),
   title: companyConfig.seo.title,
   description: companyConfig.seo.description,
   keywords: companyConfig.seo.keywords,
@@ -40,7 +42,7 @@ export const metadata: Metadata = {
     description: companyConfig.seo.description,
     images: [
       {
-        url: '/maxi-logo-removebg-preview.png',
+        url: '/new-standard.png',
         width: 1200,
         height: 630,
         alt: 'Maxi Cab Melbourne - Premium Transportation Services',
@@ -51,7 +53,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: companyConfig.seo.title,
     description: companyConfig.seo.description,
-    images: ['/maxi-logo-removebg-preview.png'],
+    images: ['/new-standard.png'],
   },
   alternates: {
     canonical: 'https://maxicab24.com',
@@ -142,6 +144,7 @@ export default function RootLayout({
       <body className={`${inter.variable} antialiased`}>
         <MobileMenuProvider>
           <div className="min-h-screen bg-black text-white relative overflow-hidden">
+            <RouteProgress />
             <Header />
             <main className="relative z-10">
               {children}

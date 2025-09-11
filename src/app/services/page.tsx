@@ -28,7 +28,7 @@ export default function Services() {
               src="/people-group.png"
               alt="Luxury car background"
               fill
-              className="object-cover"
+              className="object-cover sm:object-cover object-contain"
               priority
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/60"></div>

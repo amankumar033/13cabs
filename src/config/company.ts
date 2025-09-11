@@ -20,7 +20,7 @@ export const companyConfig = {
   
   // SEO Metadata
   seo: {
-    title: "Maxi Cab Melbourne | Maxi Taxi | Premium Cab Services 24/7",
+    title: "Maxi Cab Melbourne - Premium Cab Services 24/7",
     description: "Professional Maxi Cab, Maxi Taxi & Wheelchair accessible transportation in Melbourne. Safe, reliable rides for groups, airport transfers, NDIS transport. Book now!",
     keywords: "maxi cab, maxi taxi, maxicab, maxitaxi, maxi cab 24, maxi 24, maxi taxi 24, maxicab 24, maxitaxi 24, cab melbourne, taxi melbourne, wheelchair cab, ndis transport, airport transfer, group transport, maxi cab melbourne, maxi taxi melbourne"
   },

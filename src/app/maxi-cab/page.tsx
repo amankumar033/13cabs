@@ -25,7 +25,7 @@ export default function MaxiCab() {
               src="/cab.png"
               alt="Maxi Cab van background"
               fill
-              className="object-cover"
+              className="object-cover sm:object-cover object-contain"
               priority
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/60"></div>
@@ -413,7 +413,7 @@ export default function MaxiCab() {
                 {/* Standard Maxi Cab */}
                 <div className="bg-gradient-to-br from-white/15 to-white/8 backdrop-blur-sm border border-white/25 rounded-2xl overflow-hidden hover:bg-white/25 transition-all duration-300">
                  <div className="relative h-48 sm:h-56 lg:h-64 w-full">
-                   <Image src="/new-standard.png" alt="Standard maxi cab" fill className="object-cover object-center"/>
+                   <Image src="/new-standard.png" alt="Standard maxi cab" fill className="object-cover sm:object-cover object-contain object-center"/>
                  </div>
                   <div className="p-6">
                     <h3 className="text-2xl font-bold text-white mb-3">Standard Maxi Cab</h3>
@@ -440,7 +440,7 @@ export default function MaxiCab() {
                 {/* Large Maxi Cab */}
                 <div className="bg-gradient-to-br from-white/15 to-white/8 backdrop-blur-sm border border-white/25 rounded-2xl overflow-hidden hover:bg-white/25 transition-all duration-300">
                 <div className="relative h-48 sm:h-56 lg:h-64 w-full">
-                  <Image src="/large-cab.png" alt="Large maxi cab" fill className="object-cover object-center"/>
+                  <Image src="/large-cab.png" alt="Large maxi cab" fill className="object-cover sm:object-cover object-contain object-center"/>
                 </div>
                   <div className="p-6">
                     <h3 className="text-2xl font-bold text-white mb-3">Large Maxi Cab</h3>
@@ -467,7 +467,7 @@ export default function MaxiCab() {
                 {/* Premium Maxi Cab */}
                 <div className="bg-gradient-to-br from-white/15 to-white/8 backdrop-blur-sm border border-white/25 rounded-2xl overflow-hidden hover:bg-white/25 transition-all duration-300">
                 <div className="relative h-48 sm:h-56 lg:h-64 w-full">
-                  <Image src="/premium-maxi-cab.png" alt="Premium maxi cab" fill className="object-cover object-center"/>
+                  <Image src="/premium-maxi-cab.png" alt="Premium maxi cab" fill className="object-cover sm:object-cover object-contain object-center"/>
                 </div>
                   <div className="p-6">
                     <h3 className="text-2xl font-bold text-white mb-3">Premium Maxi Cab</h3>
