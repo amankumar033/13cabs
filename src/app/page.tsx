@@ -3,8 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ArrowRightIcon, StarIcon, CheckIcon, ClockIcon as ClockIconSolid, UserIcon, TruckIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
-
+import { ArrowRightIcon, StarIcon, CheckIcon, ClockIcon as ClockIconSolid, UserIcon, TruckIcon, ShieldCheckIcon, PhoneIcon } from '@heroicons/react/24/outline';
+import companyConfig from "@/config/company";
 import PremiumServices from "@/components/PremiumServices";
 import BookYourRideForm from "@/components/BookYourRideForm";
 
@@ -66,10 +66,10 @@ export default function Home() {
                   <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
                 
-                <Link href="/services" className="group border-2 border-white/40 text-white px-6 py-3 rounded-xl font-bold text-base hover:border-yellow-400 hover:text-yellow-400 transition-all duration-300 backdrop-blur-sm bg-white/15 hover:bg-white/25 flex items-center justify-center space-x-2">
-                  <TruckIcon className="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />
-                  <span>View Services</span>
-                </Link>
+                <a  href={`tel:${companyConfig.phoneHref}`} className="group border-2 border-white/40 text-white px-6 py-3 rounded-xl font-bold text-base hover:border-yellow-400 hover:text-yellow-400 transition-all duration-300 backdrop-blur-sm bg-white/15 hover:bg-white/25 flex items-center justify-center space-x-2">
+                 <PhoneIcon className="w-5 h-5"/>
+                  <span>Call Now</span>
+                </a>
               </div>
 
               {/* Features */}

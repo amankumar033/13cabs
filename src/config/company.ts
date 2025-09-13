@@ -14,7 +14,8 @@ export const companyConfig = {
   },
   
   // Contact Information
-  phone: "+61415555576",
+  phone: "+61 415555576",
+  phoneHref:"+61415555576",
   email: "maxicab@gmail.com",
   address: "8 Parish St. Tarneit VIC 3029",
   

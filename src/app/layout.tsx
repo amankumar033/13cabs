@@ -3,11 +3,11 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import FloatingActionButtonWrapper from "@/components/FloatingActionButtonWrapper";
 import RouteProgress from "@/components/RouteProgress";
 import { MobileMenuProvider } from "@/contexts/MobileMenuContext";
 import { companyConfig } from "@/config/company";
 import { Toaster } from "react-hot-toast";
+import FloatingActionButton from "@/components/FloatingActionButton";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -150,7 +150,7 @@ export default function RootLayout({
               {children}
             </main>
             <Footer />
-            <FloatingActionButtonWrapper />
+         <FloatingActionButton/>
             <Toaster
               position="top-right"
               toastOptions={{

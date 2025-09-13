@@ -5,7 +5,7 @@ import {TruckIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { usePathname } from 'next/navigation';
 import { useMobileMenu } from '@/contexts/MobileMenuContext';
 import Logo from './Logo';
-
+import companyConfig from '@/config/company';
 export default function Header() {
   const pathname = usePathname();
   const { isMobileMenuOpen, toggleMobileMenu, closeMobileMenu } = useMobileMenu();
@@ -54,8 +54,9 @@ export default function Header() {
             <Link href="/booking" className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-xl font-bold text-sm hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-lg shadow-yellow-400/30 hover:shadow-yellow-400/50 transform hover:scale-105 border border-yellow-300/30">
               Book Now
             </Link>
-            <Link href="/contact" className="border-2 border-white/40 text-white px-6 py-2 rounded-xl font-bold text-sm hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm bg-white/10 hover:bg-white/25">
-              Contact Us
+            <Link  href={`tel:${companyConfig.phoneHref}`} className="border-2 border-white/40 text-white px-6 py-2 rounded-xl font-bold text-sm hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm bg-white/10 hover:bg-white/25">
+             
+              Call Now
             </Link>
           </div>
 
@@ -141,11 +142,11 @@ export default function Header() {
               Book Now
             </Link>
             <Link 
-              href="/contact"
+                href={`tel:${companyConfig.phoneHref}`}
               onClick={closeMobileMenu}
               className="block w-full border-2 border-white/40 text-white px-6 py-3 rounded-xl font-bold text-center hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm bg-white/10 hover:bg-white/25"
             >
-              Contact Us
+              Call Now
             </Link>
           </div>
         </div>

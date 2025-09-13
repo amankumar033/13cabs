@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ClockIcon, MapPinIcon, PhoneIcon, UserIcon, CheckIcon, ArrowRightIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 import ContactForm from "@/components/ContactForm";
-
+import companyConfig from "@/config/company";
 export default function Contact() {
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
@@ -35,15 +35,15 @@ export default function Contact() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8">
-                <a 
-                  href="https://wa.me/61415555576?text=Hi%2C%20I&amp;#39;d%20like%20to%20book%20a%20ride%20with%20Maxi%20Cab.%20Please%20let%20me%20know%20about%20availability%20and%20pricing."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-lg shadow-yellow-400/30 hover:shadow-yellow-400/50 transform hover:scale-105 flex items-center justify-center space-x-2 sm:space-x-3 border border-yellow-300/30"
-                >
-                  <PhoneIcon className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform duration-300" />
-                  <span>Call to Book</span>
-                </a>
+              <a
+  href={`tel:${companyConfig.phoneHref}`}
+  className="group bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-lg shadow-yellow-400/30 hover:shadow-yellow-400/50 transform hover:scale-105 flex items-center justify-center space-x-2 sm:space-x-3 border border-yellow-300/30"
+>
+  <PhoneIcon className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform duration-300" />
+  <span>Call to Book</span>
+</a>
+
+                
                 
                 <a 
                   href="mailto:maxicab@gmail.com?subject=Booking%20Inquiry%20-%20Maxi%20Cab%20Services&body=Hi%2C%0A%0AI%20would%20like%20to%20inquire%20about%20booking%20a%20ride%20with%20Maxi%20Cab.%20Please%20let%20me%20know%20about%20availability%20and%20pricing.%0A%0AThank%20you%21"
@@ -337,7 +337,7 @@ export default function Contact() {
                   <ArrowRightIcon className="w-4 h-4 sm:w-5 sm:h-5" />
                 </Link>
                 <a 
-                  href="https://wa.me/61415555576?text=Hi%2C%20I%27d%20like%20to%20book%20a%20ride%20with%20Maxi%20Cab.%20Please%20let%20me%20know%20about%20availability%20and%20pricing."
+                  href={`tel:${companyConfig.phoneHref}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="border-2 border-yellow-400 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-yellow-400 hover:text-black transition-all duration-300 backdrop-blur-sm bg-white/10 hover:bg-white/25 flex items-center justify-center space-x-2 sm:space-x-3"

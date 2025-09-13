@@ -7,7 +7,7 @@ import { PhoneIcon, UserIcon, CheckIcon, ArrowRightIcon, StarIcon, ShieldCheckIc
 import WhyChooseUs from "@/components/WhyChooseUs";
 import PremiumServices from "@/components/PremiumServices";
 import BookYourRideForm from "@/components/BookYourRideForm";
-
+import companyConfig from "@/config/company";
 export default function Services() {
   const router = useRouter();
 
@@ -55,8 +55,8 @@ export default function Services() {
                 </Link>
                 
                 <a 
-                  href="https://wa.me/61415555576?text=Hi%2C%20I%27d%20like%20to%20book%20a%20ride%20with%20Maxi%20Cab.%20Please%20let%20me%20know%20about%20availability%20and%20pricing."
-                  target="_blank"
+
+href={`tel:${companyConfig.phoneHref}`}target="_blank"
                   rel="noopener noreferrer"
                   className="group border-2 border-yellow-400 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-yellow-400 hover:text-black transition-all duration-300 backdrop-blur-sm bg-white/15 hover:bg-white/25 flex items-center justify-center space-x-2 sm:space-x-3"
                 >

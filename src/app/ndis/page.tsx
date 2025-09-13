@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ClockIcon, MapPinIcon, PhoneIcon, UserIcon, CheckIcon, ArrowRightIcon, StarIcon, ShieldCheckIcon, CurrencyDollarIcon, HeartIcon, AcademicCapIcon, PaintBrushIcon } from '@heroicons/react/24/outline';
-
+import companyConfig from "@/config/company";
 export default function NDISTransport() {
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
@@ -43,7 +43,8 @@ export default function NDISTransport() {
                   </Link>
                   
                   <a 
-                    href="https://wa.me/61415555576?text=Hi%2C%20I&amp;#39;d%20like%20to%20book%20NDIS%20Transport%20services.%20Please%20let%20me%20know%20about%20availability%20and%20pricing."
+                    // href="https://wa.me/61415555576?text=Hi%2C%20I&amp;#39;d%20like%20to%20book%20NDIS%20Transport%20services.%20Please%20let%20me%20know%20about%20availability%20and%20pricing."
+                    href={`tel:${companyConfig.phoneHref}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group border-2 border-yellow-400 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-yellow-400 hover:text-black transition-all duration-300 backdrop-blur-sm bg-white/10 hover:bg-white/25 flex items-center justify-center space-x-2 sm:space-x-3"
@@ -362,10 +363,10 @@ export default function NDISTransport() {
                   <span>Book Now</span>
                   <ArrowRightIcon className="w-5 h-5" />
                 </Link>
-                <button className="border-2 border-yellow-400 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-yellow-400 hover:text-black transition-all duration-300 backdrop-blur-sm bg-white/10 hover:bg-white/25 flex items-center justify-center space-x-3">
+                <Link   href={`tel:${companyConfig.phoneHref}`} className="border-2 border-yellow-400 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-yellow-400 hover:text-black transition-all duration-300 backdrop-blur-sm bg-white/10 hover:bg-white/25 flex items-center justify-center space-x-3">
                   <PhoneIcon className="w-5 h-5" />
-                  <span>Contact Us</span>
-                </button>
+                  <span>Call Now</span>
+                </Link>
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { CalendarIcon, ClockIcon, MapPinIcon, PhoneIcon, CheckIcon, ArrowRightIcon, StarIcon, ShieldCheckIcon, CurrencyDollarIcon, GlobeAltIcon, HeartIcon } from '@heroicons/react/24/outline';
 import WhyChooseUs from "@/components/WhyChooseUs";
-
+import companyConfig from "@/config/company";
 export default function MaxiCab() {
   const router = useRouter();
 
@@ -54,8 +54,7 @@ export default function MaxiCab() {
                   </a>
                   
                   <a 
-                    href="https://wa.me/61415555576?text=Hi%2C%20I%27d%20like%20to%20book%20a%20Maxi%20Cab%20ride.%20Please%20let%20me%20know%20about%20availability%20and%20pricing."
-                    target="_blank"
+  href={`tel:${companyConfig.phoneHref}`}                    target="_blank"
                     rel="noopener noreferrer"
                     className="group border-2 border-yellow-400 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-yellow-400 hover:text-black transition-all duration-300 backdrop-blur-sm bg-white/15 hover:bg-white/25 flex items-center justify-center space-x-2 sm:space-x-3"
                   >
@@ -564,8 +563,9 @@ export default function MaxiCab() {
                    <span>Book Now</span>
                    <ArrowRightIcon className="w-5 h-5" />
                  </button>
-                 <Link href="/contact" className="border-2 border-white/40 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm bg-white/10 hover:bg-white/25 flex items-center justify-center space-x-3">
-                   Contact Us
+                 <Link   href={`tel:${companyConfig.phoneHref}`} className="border-2 border-white/40 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm bg-white/10 hover:bg-white/25 flex items-center justify-center space-x-3">
+                  <PhoneIcon className="w-5 h-5 mr-3"/>
+                   Call Now
                  </Link>
                </div>
             </div>

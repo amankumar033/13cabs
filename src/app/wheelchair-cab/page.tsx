@@ -3,10 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { CalendarIcon, ClockIcon, MapPinIcon, CheckIcon, ArrowRightIcon, StarIcon, ShieldCheckIcon, HeartIcon } from '@heroicons/react/24/outline';
+import { CalendarIcon, ClockIcon, MapPinIcon, CheckIcon, ArrowRightIcon, StarIcon, ShieldCheckIcon, HeartIcon, PhoneIcon } from '@heroicons/react/24/outline';
 import WhyChooseUs from "@/components/WhyChooseUs";
 import PremiumServices from "@/components/PremiumServices";
-
+import companyConfig from "@/config/company";
 export default function WheelchairCab() {
   const router = useRouter();
 
@@ -57,10 +57,10 @@ export default function WheelchairCab() {
                   </button>
                   
                   <Link 
-                    href="/contact"
-                    className="group border-2 border-white/40 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm bg-white/10 hover:bg-white/25 flex items-center justify-center space-x-2 sm:space-x-3"
+  href={`tel:${companyConfig.phoneHref}`}                    className="group border-2 border-white/40 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm bg-white/10 hover:bg-white/25 flex items-center justify-center space-x-2 sm:space-x-3"
                   >
-                    <span>Contact Us</span>
+                    <PhoneIcon className="w-5 h-5"/>
+                    <span>Call Now</span>
                   </Link>
                 </div>
 
